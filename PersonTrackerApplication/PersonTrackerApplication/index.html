@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html ng-app="mainModule">
+<head>
+    <meta charset="utf-8" />
+    <title>Person Tracker</title>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+
+    <link rel="stylesheet" href="Content/bootstrap.min.css" />
+    <script src="Content/bootstrap.min.js"></script>
+    <script src="Controllers/mainController.js"></script>
+
+
+</head>
+<body ng-controller="mainController">
+    <header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/">PERSON TRACKER</a>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/prijaviNestanak">Prijavi nestanak<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#/prijaviDelinkventa">Prijavi delinkventa</a></li>   
+                    <li><a href="#/pretraga">Pretraga</a></li>   
+                    <li><a href="#/statistike">Statistike</a></li>                  
+                </ul>                            
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <div id="main">
+        <div ng-view> </div>
+
+    </div>
+</body>
+</html>
+
+
