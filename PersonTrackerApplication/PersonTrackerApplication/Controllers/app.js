@@ -1,38 +1,35 @@
 ﻿var mainModule = angular.module("mainModule", ['ngRoute']);
 
-mainModule.controller('mainController', function ($scope) {
-    $scope.poruka = "porukablabla";
-});
+
 
 mainModule.config(function ($routeProvider) {
     $routeProvider
-                
-        .when('/',{
+
+        .when('/', {
             templateUrl: '/home.html',
         })
 
         .when('/prijaviNestanak', {
             templateUrl: '/prijaviNestanak.html',
-            //controller: 'prijaviNestanakController'
+            controller: 'prijaviNestanakController'
         })
-        
+
         .when('/prijaviDelinkventa', {
             templateUrl: '/prijaviDelinkventa.html',
-            // controller: 'prijaviDelinkventaController'
+            controller: 'prijaviDelinkventaController'
         })
 
         .when('/pretraga', {
             templateUrl: '/pretraga.html',
-            //  controller: 'pretragaController.js'
+            controller: 'pretragaController'
         })
 
         .when('/statistike', {
             templateUrl: '/statistike.html',
-            //controller: 'statistikeController'
+            controller: 'statistikeController'
         });
 
 });
-
 
 
 

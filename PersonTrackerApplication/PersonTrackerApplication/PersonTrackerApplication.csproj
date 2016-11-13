@@ -122,7 +122,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Controllers\mainController.js" />
+    <Content Include="Controllers\app.js" />
     <Content Include="Controllers\pretragaController.js" />
     <Content Include="Controllers\prijaviDelinkventaController.js" />
     <Content Include="Controllers\prijaviNestanakController.js" />

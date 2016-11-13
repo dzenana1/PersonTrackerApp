@@ -1,3 +1,3 @@
 ﻿mainModule.controller('pretragaController', function ($scope) {
-    $scope.poruka = "porukaPretraga kontroler";
+    $scope.poruka3 = "porukaPretraga kontroler";
 });
