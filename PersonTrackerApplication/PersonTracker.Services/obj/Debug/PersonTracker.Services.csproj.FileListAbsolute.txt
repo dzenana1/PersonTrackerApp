@@ -90,3 +90,6 @@ C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTracker
 C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTracker.Services\obj\Debug\PersonTracker.Services.csprojResolveAssemblyReference.cache
 C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTracker.Services\obj\Debug\PersonTracker.Services.dll
 C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTracker.Services\obj\Debug\PersonTracker.Services.pdb
+C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTracker.Services\bin\System.Web.Cors.dll
+C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTracker.Services\bin\System.Web.Http.Cors.dll
+C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTracker.Services\bin\System.Web.Http.Cors.xml
