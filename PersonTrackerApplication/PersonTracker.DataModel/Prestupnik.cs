@@ -21,12 +21,11 @@ namespace PersonTracker.DataModel
         }
     
         public int idPrestupnik { get; set; }
+        public Nullable<System.DateTime> DatumPrestupa { get; set; }
+        public string MjestoPrestupa { get; set; }
         public Nullable<int> idSkica { get; set; }
         public Nullable<int> idKorisnik { get; set; }
-        public string opis { get; set; }
-        public byte[] fotografija { get; set; }
-        public string mjestoPrijestupa { get; set; }
-        public Nullable<System.DateTime> datumPrijestupa { get; set; }
+        public string Opis { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Komentar> Komentar { get; set; }

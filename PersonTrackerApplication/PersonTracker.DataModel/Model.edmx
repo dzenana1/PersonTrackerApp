@@ -9,127 +9,128 @@
           <Key>
             <PropertyRef Name="idBrada" />
           </Key>
-          <Property Name="idBrada" Type="int" Nullable="false" />
-          <Property Name="layer" Type="varbinary(max)" />
+          <Property Name="idBrada" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Layer" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Celjust">
           <Key>
             <PropertyRef Name="idCeljust" />
           </Key>
-          <Property Name="idCeljust" Type="int" Nullable="false" />
-          <Property Name="layer" Type="varbinary(max)" />
+          <Property Name="idCeljust" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Layer" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Glava">
           <Key>
             <PropertyRef Name="idGlava" />
           </Key>
-          <Property Name="idGlava" Type="int" Nullable="false" />
-          <Property Name="layer" Type="varbinary(max)" />
+          <Property Name="idGlava" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Layer" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Komentar">
           <Key>
             <PropertyRef Name="idKomentar" />
           </Key>
-          <Property Name="idKomentar" Type="int" Nullable="false" />
-          <Property Name="text" Type="varchar" MaxLength="5000" />
-          <Property Name="idPrestupnik" Type="int" />
+          <Property Name="idKomentar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tekst" Type="varchar" MaxLength="200" />
           <Property Name="idKorisnik" Type="int" />
+          <Property Name="idNestali" Type="int" />
+          <Property Name="idPrestupnik" Type="int" />
         </EntityType>
         <EntityType Name="Korisnik">
           <Key>
             <PropertyRef Name="idKorisnik" />
           </Key>
-          <Property Name="idKorisnik" Type="int" Nullable="false" />
-          <Property Name="ime" Type="varchar" MaxLength="50" />
-          <Property Name="prezime" Type="varchar" MaxLength="50" />
-          <Property Name="email" Type="varchar" MaxLength="50" />
-          <Property Name="brojTelefona" Type="varchar" MaxLength="50" />
+          <Property Name="idKorisnik" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ime" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="Prezime" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="45" Nullable="false" />
         </EntityType>
         <EntityType Name="Kosa">
           <Key>
             <PropertyRef Name="idKosa" />
           </Key>
-          <Property Name="idKosa" Type="int" Nullable="false" />
-          <Property Name="layer" Type="varbinary(max)" />
+          <Property Name="idKosa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Layer" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Nestali">
           <Key>
             <PropertyRef Name="idNestali" />
           </Key>
-          <Property Name="idNestali" Type="int" Nullable="false" />
-          <Property Name="ime" Type="varchar" MaxLength="50" />
-          <Property Name="prezime" Type="varchar" MaxLength="50" />
-          <Property Name="godinaRodenja" Type="int" />
-          <Property Name="fotografija" Type="varbinary(max)" />
-          <Property Name="datumNestanka" Type="date" />
-          <Property Name="mjestoNestanka" Type="varchar" MaxLength="50" />
+          <Property Name="idNestali" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ime" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="Prezime" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="GodinaRodjenja" Type="int" />
+          <Property Name="DatumNestanka" Type="date" />
+          <Property Name="MjestoNestanka" Type="varchar" MaxLength="45" />
+          <Property Name="Fotografija" Type="varbinary(max)" />
           <Property Name="idKorisnik" Type="int" />
-          <Property Name="spol" Type="varbinary" MaxLength="50" />
-          <Property Name="komentar" Type="varchar" MaxLength="50" />
-          <Property Name="visina" Type="varchar" MaxLength="50" />
-          <Property Name="tezina" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Nos">
           <Key>
             <PropertyRef Name="idNos" />
           </Key>
-          <Property Name="idNos" Type="int" Nullable="false" />
-          <Property Name="layer" Type="varbinary(max)" />
+          <Property Name="idNos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Layer" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Obrve">
           <Key>
             <PropertyRef Name="idObrve" />
           </Key>
-          <Property Name="idObrve" Type="int" Nullable="false" />
-          <Property Name="layer" Type="varbinary(max)" />
+          <Property Name="idObrve" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Layer" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Oci">
           <Key>
             <PropertyRef Name="idOci" />
           </Key>
-          <Property Name="idOci" Type="int" Nullable="false" />
-          <Property Name="layer" Type="varbinary(max)" />
+          <Property Name="idOci" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Layer" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Prestupnik">
           <Key>
             <PropertyRef Name="idPrestupnik" />
           </Key>
-          <Property Name="idPrestupnik" Type="int" Nullable="false" />
+          <Property Name="idPrestupnik" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DatumPrestupa" Type="date" />
+          <Property Name="MjestoPrestupa" Type="varchar" MaxLength="50" />
           <Property Name="idSkica" Type="int" />
           <Property Name="idKorisnik" Type="int" />
-          <Property Name="opis" Type="varchar" MaxLength="50" />
-          <Property Name="fotografija" Type="varbinary(max)" />
-          <Property Name="mjestoPrijestupa" Type="nchar" MaxLength="10" />
-          <Property Name="datumPrijestupa" Type="date" />
+          <Property Name="Opis" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Skica">
           <Key>
             <PropertyRef Name="idSkica" />
           </Key>
-          <Property Name="idSkica" Type="int" Nullable="false" />
-          <Property Name="idBrada" Type="int" />
+          <Property Name="idSkica" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Foto" Type="varbinary(max)" />
           <Property Name="idGlava" Type="int" />
-          <Property Name="foto" Type="varbinary(max)" />
-          <Property Name="idUsne" Type="int" />
+          <Property Name="idCeljust" Type="int" />
           <Property Name="idObrve" Type="int" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
+          <Property Name="idOci" Type="int" />
+          <Property Name="idNos" Type="int" />
+          <Property Name="idUsne" Type="int" />
+          <Property Name="idBrada" Type="int" />
+          <Property Name="idKosa" Type="int" />
         </EntityType>
         <EntityType Name="Usne">
           <Key>
             <PropertyRef Name="idUsne" />
           </Key>
-          <Property Name="idUsne" Type="int" Nullable="false" />
-          <Property Name="layer" Type="varbinary(max)" />
+          <Property Name="idUsne" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Layer" Type="varbinary(max)" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Brada_Brada">
+          <End Role="Brada" Type="Self.Brada" Multiplicity="1" />
+          <End Role="Brada1" Type="Self.Brada" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Brada">
+              <PropertyRef Name="idBrada" />
+            </Principal>
+            <Dependent Role="Brada1">
+              <PropertyRef Name="idBrada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Komentar_Korisnik">
           <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="0..1" />
           <End Role="Komentar" Type="Self.Komentar" Multiplicity="*" />
@@ -142,6 +143,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Komentar_Nestali">
+          <End Role="Nestali" Type="Self.Nestali" Multiplicity="0..1" />
+          <End Role="Komentar" Type="Self.Komentar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nestali">
+              <PropertyRef Name="idNestali" />
+            </Principal>
+            <Dependent Role="Komentar">
+              <PropertyRef Name="idNestali" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Komentar_Prestupnik">
           <End Role="Prestupnik" Type="Self.Prestupnik" Multiplicity="0..1" />
           <End Role="Komentar" Type="Self.Komentar" Multiplicity="*" />
@@ -151,6 +164,18 @@
             </Principal>
             <Dependent Role="Komentar">
               <PropertyRef Name="idPrestupnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Korisnik_Korisnik">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+          <End Role="Korisnik1" Type="Self.Korisnik" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="idKorisnik" />
+            </Principal>
+            <Dependent Role="Korisnik1">
+              <PropertyRef Name="idKorisnik" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -167,86 +192,86 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Prestupnik_Korisnik">
-          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
-          <End Role="Prestupnik" Type="Self.Prestupnik" Multiplicity="0..1" />
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="0..1" />
+          <End Role="Prestupnik" Type="Self.Prestupnik" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Korisnik">
               <PropertyRef Name="idKorisnik" />
             </Principal>
             <Dependent Role="Prestupnik">
-              <PropertyRef Name="idPrestupnik" />
+              <PropertyRef Name="idKorisnik" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Prestupnik_Skica">
-          <End Role="Skica" Type="Self.Skica" Multiplicity="1" />
-          <End Role="Prestupnik" Type="Self.Prestupnik" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+          <End Role="Prestupnik" Type="Self.Prestupnik" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Skica">
               <PropertyRef Name="idSkica" />
             </Principal>
             <Dependent Role="Prestupnik">
-              <PropertyRef Name="idPrestupnik" />
+              <PropertyRef Name="idSkica" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Skica_Brada">
-          <End Role="Brada" Type="Self.Brada" Multiplicity="1" />
-          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+          <End Role="Brada" Type="Self.Brada" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Brada">
               <PropertyRef Name="idBrada" />
             </Principal>
             <Dependent Role="Skica">
-              <PropertyRef Name="idSkica" />
+              <PropertyRef Name="idBrada" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Skica_Brkovi">
-          <End Role="Celjust" Type="Self.Celjust" Multiplicity="1" />
-          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+        <Association Name="FK_Skica_Celjust">
+          <End Role="Celjust" Type="Self.Celjust" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Celjust">
               <PropertyRef Name="idCeljust" />
             </Principal>
             <Dependent Role="Skica">
-              <PropertyRef Name="idSkica" />
+              <PropertyRef Name="idCeljust" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Skica_Glava">
-          <End Role="Glava" Type="Self.Glava" Multiplicity="1" />
-          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+          <End Role="Glava" Type="Self.Glava" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Glava">
               <PropertyRef Name="idGlava" />
             </Principal>
             <Dependent Role="Skica">
-              <PropertyRef Name="idSkica" />
+              <PropertyRef Name="idGlava" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Skica_Kosa">
-          <End Role="Kosa" Type="Self.Kosa" Multiplicity="1" />
-          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+          <End Role="Kosa" Type="Self.Kosa" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Kosa">
               <PropertyRef Name="idKosa" />
             </Principal>
             <Dependent Role="Skica">
-              <PropertyRef Name="idSkica" />
+              <PropertyRef Name="idKosa" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Skica_Nos">
-          <End Role="Nos" Type="Self.Nos" Multiplicity="1" />
-          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+          <End Role="Nos" Type="Self.Nos" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Nos">
               <PropertyRef Name="idNos" />
             </Principal>
             <Dependent Role="Skica">
-              <PropertyRef Name="idSkica" />
+              <PropertyRef Name="idNos" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -263,14 +288,14 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Skica_Oci">
-          <End Role="Oci" Type="Self.Oci" Multiplicity="1" />
-          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+          <End Role="Oci" Type="Self.Oci" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Oci">
               <PropertyRef Name="idOci" />
             </Principal>
             <Dependent Role="Skica">
-              <PropertyRef Name="idSkica" />
+              <PropertyRef Name="idOci" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -299,15 +324,26 @@
           <EntitySet Name="Oci" EntityType="Self.Oci" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Prestupnik" EntityType="Self.Prestupnik" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Skica" EntityType="Self.Skica" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usne" EntityType="Self.Usne" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Brada_Brada" Association="Self.FK_Brada_Brada">
+            <End Role="Brada" EntitySet="Brada" />
+            <End Role="Brada1" EntitySet="Brada" />
+          </AssociationSet>
           <AssociationSet Name="FK_Komentar_Korisnik" Association="Self.FK_Komentar_Korisnik">
             <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Komentar" EntitySet="Komentar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Komentar_Nestali" Association="Self.FK_Komentar_Nestali">
+            <End Role="Nestali" EntitySet="Nestali" />
             <End Role="Komentar" EntitySet="Komentar" />
           </AssociationSet>
           <AssociationSet Name="FK_Komentar_Prestupnik" Association="Self.FK_Komentar_Prestupnik">
             <End Role="Prestupnik" EntitySet="Prestupnik" />
             <End Role="Komentar" EntitySet="Komentar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Korisnik_Korisnik" Association="Self.FK_Korisnik_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Korisnik1" EntitySet="Korisnik" />
           </AssociationSet>
           <AssociationSet Name="FK_Nestali_Korisnik" Association="Self.FK_Nestali_Korisnik">
             <End Role="Korisnik" EntitySet="Korisnik" />
@@ -325,7 +361,7 @@
             <End Role="Brada" EntitySet="Brada" />
             <End Role="Skica" EntitySet="Skica" />
           </AssociationSet>
-          <AssociationSet Name="FK_Skica_Brkovi" Association="Self.FK_Skica_Brkovi">
+          <AssociationSet Name="FK_Skica_Celjust" Association="Self.FK_Skica_Celjust">
             <End Role="Celjust" EntitySet="Celjust" />
             <End Role="Skica" EntitySet="Skica" />
           </AssociationSet>
@@ -363,47 +399,52 @@
           <Key>
             <PropertyRef Name="idBrada" />
           </Key>
-          <Property Name="idBrada" Type="Int32" Nullable="false" />
-          <Property Name="layer" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="idBrada" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Layer" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <NavigationProperty Name="Brada1" Relationship="Self.FK_Brada_Brada" FromRole="Brada" ToRole="Brada1" />
+          <NavigationProperty Name="Brada2" Relationship="Self.FK_Brada_Brada" FromRole="Brada1" ToRole="Brada" />
           <NavigationProperty Name="Skica" Relationship="Self.FK_Skica_Brada" FromRole="Brada" ToRole="Skica" />
         </EntityType>
         <EntityType Name="Celjust">
           <Key>
             <PropertyRef Name="idCeljust" />
           </Key>
-          <Property Name="idCeljust" Type="Int32" Nullable="false" />
-          <Property Name="layer" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <NavigationProperty Name="Skica" Relationship="Self.FK_Skica_Brkovi" FromRole="Celjust" ToRole="Skica" />
+          <Property Name="idCeljust" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Layer" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <NavigationProperty Name="Skica" Relationship="Self.FK_Skica_Celjust" FromRole="Celjust" ToRole="Skica" />
         </EntityType>
         <EntityType Name="Glava">
           <Key>
             <PropertyRef Name="idGlava" />
           </Key>
-          <Property Name="idGlava" Type="Int32" Nullable="false" />
-          <Property Name="layer" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="idGlava" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Layer" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <NavigationProperty Name="Skica" Relationship="Self.FK_Skica_Glava" FromRole="Glava" ToRole="Skica" />
         </EntityType>
         <EntityType Name="Komentar">
           <Key>
             <PropertyRef Name="idKomentar" />
           </Key>
-          <Property Name="idKomentar" Type="Int32" Nullable="false" />
-          <Property Name="text" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
-          <Property Name="idPrestupnik" Type="Int32" />
+          <Property Name="idKomentar" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tekst" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="idKorisnik" Type="Int32" />
+          <Property Name="idNestali" Type="Int32" />
+          <Property Name="idPrestupnik" Type="Int32" />
           <NavigationProperty Name="Korisnik" Relationship="Self.FK_Komentar_Korisnik" FromRole="Komentar" ToRole="Korisnik" />
+          <NavigationProperty Name="Nestali" Relationship="Self.FK_Komentar_Nestali" FromRole="Komentar" ToRole="Nestali" />
           <NavigationProperty Name="Prestupnik" Relationship="Self.FK_Komentar_Prestupnik" FromRole="Komentar" ToRole="Prestupnik" />
         </EntityType>
         <EntityType Name="Korisnik">
           <Key>
             <PropertyRef Name="idKorisnik" />
           </Key>
-          <Property Name="idKorisnik" Type="Int32" Nullable="false" />
-          <Property Name="ime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="brojTelefona" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="idKorisnik" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Prezime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Komentar" Relationship="Self.FK_Komentar_Korisnik" FromRole="Korisnik" ToRole="Komentar" />
+          <NavigationProperty Name="Korisnik1" Relationship="Self.FK_Korisnik_Korisnik" FromRole="Korisnik" ToRole="Korisnik1" />
+          <NavigationProperty Name="Korisnik2" Relationship="Self.FK_Korisnik_Korisnik" FromRole="Korisnik1" ToRole="Korisnik" />
           <NavigationProperty Name="Nestali" Relationship="Self.FK_Nestali_Korisnik" FromRole="Korisnik" ToRole="Nestali" />
           <NavigationProperty Name="Prestupnik" Relationship="Self.FK_Prestupnik_Korisnik" FromRole="Korisnik" ToRole="Prestupnik" />
         </EntityType>
@@ -411,63 +452,59 @@
           <Key>
             <PropertyRef Name="idKosa" />
           </Key>
-          <Property Name="idKosa" Type="Int32" Nullable="false" />
-          <Property Name="layer" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="idKosa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Layer" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <NavigationProperty Name="Skica" Relationship="Self.FK_Skica_Kosa" FromRole="Kosa" ToRole="Skica" />
         </EntityType>
         <EntityType Name="Nestali">
           <Key>
             <PropertyRef Name="idNestali" />
           </Key>
-          <Property Name="idNestali" Type="Int32" Nullable="false" />
-          <Property Name="ime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="godinaRodenja" Type="Int32" />
-          <Property Name="fotografija" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="datumNestanka" Type="DateTime" Precision="0" />
-          <Property Name="mjestoNestanka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="idNestali" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Prezime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GodinaRodjenja" Type="Int32" />
+          <Property Name="DatumNestanka" Type="DateTime" Precision="0" />
+          <Property Name="MjestoNestanka" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Fotografija" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="idKorisnik" Type="Int32" />
-          <Property Name="spol" Type="Binary" MaxLength="50" FixedLength="false" />
-          <Property Name="komentar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="visina" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="tezina" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Komentar" Relationship="Self.FK_Komentar_Nestali" FromRole="Nestali" ToRole="Komentar" />
           <NavigationProperty Name="Korisnik" Relationship="Self.FK_Nestali_Korisnik" FromRole="Nestali" ToRole="Korisnik" />
         </EntityType>
         <EntityType Name="Nos">
           <Key>
             <PropertyRef Name="idNos" />
           </Key>
-          <Property Name="idNos" Type="Int32" Nullable="false" />
-          <Property Name="layer" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="idNos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Layer" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <NavigationProperty Name="Skica" Relationship="Self.FK_Skica_Nos" FromRole="Nos" ToRole="Skica" />
         </EntityType>
         <EntityType Name="Obrve">
           <Key>
             <PropertyRef Name="idObrve" />
           </Key>
-          <Property Name="idObrve" Type="Int32" Nullable="false" />
-          <Property Name="layer" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="idObrve" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Layer" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <NavigationProperty Name="Skica" Relationship="Self.FK_Skica_Obrve" FromRole="Obrve" ToRole="Skica" />
         </EntityType>
         <EntityType Name="Oci">
           <Key>
             <PropertyRef Name="idOci" />
           </Key>
-          <Property Name="idOci" Type="Int32" Nullable="false" />
-          <Property Name="layer" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="idOci" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Layer" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <NavigationProperty Name="Skica" Relationship="Self.FK_Skica_Oci" FromRole="Oci" ToRole="Skica" />
         </EntityType>
         <EntityType Name="Prestupnik">
           <Key>
             <PropertyRef Name="idPrestupnik" />
           </Key>
-          <Property Name="idPrestupnik" Type="Int32" Nullable="false" />
+          <Property Name="idPrestupnik" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DatumPrestupa" Type="DateTime" Precision="0" />
+          <Property Name="MjestoPrestupa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="idSkica" Type="Int32" />
           <Property Name="idKorisnik" Type="Int32" />
-          <Property Name="opis" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="fotografija" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="mjestoPrijestupa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="datumPrijestupa" Type="DateTime" Precision="0" />
+          <Property Name="Opis" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Komentar" Relationship="Self.FK_Komentar_Prestupnik" FromRole="Prestupnik" ToRole="Komentar" />
           <NavigationProperty Name="Korisnik" Relationship="Self.FK_Prestupnik_Korisnik" FromRole="Prestupnik" ToRole="Korisnik" />
           <NavigationProperty Name="Skica" Relationship="Self.FK_Prestupnik_Skica" FromRole="Prestupnik" ToRole="Skica" />
@@ -476,14 +513,18 @@
           <Key>
             <PropertyRef Name="idSkica" />
           </Key>
-          <Property Name="idSkica" Type="Int32" Nullable="false" />
-          <Property Name="idBrada" Type="Int32" />
+          <Property Name="idSkica" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="idGlava" Type="Int32" />
-          <Property Name="foto" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <Property Name="idUsne" Type="Int32" />
+          <Property Name="idCeljust" Type="Int32" />
           <Property Name="idObrve" Type="Int32" />
+          <Property Name="idOci" Type="Int32" />
+          <Property Name="idNos" Type="Int32" />
+          <Property Name="idUsne" Type="Int32" />
+          <Property Name="idBrada" Type="Int32" />
+          <Property Name="idKosa" Type="Int32" />
           <NavigationProperty Name="Brada" Relationship="Self.FK_Skica_Brada" FromRole="Skica" ToRole="Brada" />
-          <NavigationProperty Name="Celjust" Relationship="Self.FK_Skica_Brkovi" FromRole="Skica" ToRole="Celjust" />
+          <NavigationProperty Name="Celjust" Relationship="Self.FK_Skica_Celjust" FromRole="Skica" ToRole="Celjust" />
           <NavigationProperty Name="Glava" Relationship="Self.FK_Skica_Glava" FromRole="Skica" ToRole="Glava" />
           <NavigationProperty Name="Kosa" Relationship="Self.FK_Skica_Kosa" FromRole="Skica" ToRole="Kosa" />
           <NavigationProperty Name="Nos" Relationship="Self.FK_Skica_Nos" FromRole="Skica" ToRole="Nos" />
@@ -492,57 +533,59 @@
           <NavigationProperty Name="Prestupnik" Relationship="Self.FK_Prestupnik_Skica" FromRole="Skica" ToRole="Prestupnik" />
           <NavigationProperty Name="Usne" Relationship="Self.FK_Skica_Usne" FromRole="Skica" ToRole="Usne" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="Usne">
           <Key>
             <PropertyRef Name="idUsne" />
           </Key>
-          <Property Name="idUsne" Type="Int32" Nullable="false" />
-          <Property Name="layer" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="idUsne" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Layer" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <NavigationProperty Name="Skica" Relationship="Self.FK_Skica_Usne" FromRole="Usne" ToRole="Skica" />
         </EntityType>
-        <Association Name="FK_Skica_Brada">
+        <Association Name="FK_Brada_Brada">
           <End Role="Brada" Type="Self.Brada" Multiplicity="1" />
-          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+          <End Role="Brada1" Type="Self.Brada" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Brada">
+              <PropertyRef Name="idBrada" />
+            </Principal>
+            <Dependent Role="Brada1">
+              <PropertyRef Name="idBrada" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Skica_Brada">
+          <End Role="Brada" Type="Self.Brada" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Brada">
               <PropertyRef Name="idBrada" />
             </Principal>
             <Dependent Role="Skica">
-              <PropertyRef Name="idSkica" />
+              <PropertyRef Name="idBrada" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Skica_Brkovi">
-          <End Role="Celjust" Type="Self.Celjust" Multiplicity="1" />
-          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+        <Association Name="FK_Skica_Celjust">
+          <End Role="Celjust" Type="Self.Celjust" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Celjust">
               <PropertyRef Name="idCeljust" />
             </Principal>
             <Dependent Role="Skica">
-              <PropertyRef Name="idSkica" />
+              <PropertyRef Name="idCeljust" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Skica_Glava">
-          <End Role="Glava" Type="Self.Glava" Multiplicity="1" />
-          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+          <End Role="Glava" Type="Self.Glava" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Glava">
               <PropertyRef Name="idGlava" />
             </Principal>
             <Dependent Role="Skica">
-              <PropertyRef Name="idSkica" />
+              <PropertyRef Name="idGlava" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -558,6 +601,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Komentar_Nestali">
+          <End Role="Nestali" Type="Self.Nestali" Multiplicity="0..1" />
+          <End Role="Komentar" Type="Self.Komentar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nestali">
+              <PropertyRef Name="idNestali" />
+            </Principal>
+            <Dependent Role="Komentar">
+              <PropertyRef Name="idNestali" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Komentar_Prestupnik">
           <End Role="Prestupnik" Type="Self.Prestupnik" Multiplicity="0..1" />
           <End Role="Komentar" Type="Self.Komentar" Multiplicity="*" />
@@ -567,6 +622,18 @@
             </Principal>
             <Dependent Role="Komentar">
               <PropertyRef Name="idPrestupnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Korisnik_Korisnik">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+          <End Role="Korisnik1" Type="Self.Korisnik" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="idKorisnik" />
+            </Principal>
+            <Dependent Role="Korisnik1">
+              <PropertyRef Name="idKorisnik" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -583,38 +650,38 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Prestupnik_Korisnik">
-          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
-          <End Role="Prestupnik" Type="Self.Prestupnik" Multiplicity="0..1" />
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="0..1" />
+          <End Role="Prestupnik" Type="Self.Prestupnik" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Korisnik">
               <PropertyRef Name="idKorisnik" />
             </Principal>
             <Dependent Role="Prestupnik">
-              <PropertyRef Name="idPrestupnik" />
+              <PropertyRef Name="idKorisnik" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Skica_Kosa">
-          <End Role="Kosa" Type="Self.Kosa" Multiplicity="1" />
-          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+          <End Role="Kosa" Type="Self.Kosa" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Kosa">
               <PropertyRef Name="idKosa" />
             </Principal>
             <Dependent Role="Skica">
-              <PropertyRef Name="idSkica" />
+              <PropertyRef Name="idKosa" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Skica_Nos">
-          <End Role="Nos" Type="Self.Nos" Multiplicity="1" />
-          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+          <End Role="Nos" Type="Self.Nos" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Nos">
               <PropertyRef Name="idNos" />
             </Principal>
             <Dependent Role="Skica">
-              <PropertyRef Name="idSkica" />
+              <PropertyRef Name="idNos" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -631,26 +698,26 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Skica_Oci">
-          <End Role="Oci" Type="Self.Oci" Multiplicity="1" />
-          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+          <End Role="Oci" Type="Self.Oci" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Oci">
               <PropertyRef Name="idOci" />
             </Principal>
             <Dependent Role="Skica">
-              <PropertyRef Name="idSkica" />
+              <PropertyRef Name="idOci" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Prestupnik_Skica">
-          <End Role="Skica" Type="Self.Skica" Multiplicity="1" />
-          <End Role="Prestupnik" Type="Self.Prestupnik" Multiplicity="0..1" />
+          <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
+          <End Role="Prestupnik" Type="Self.Prestupnik" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Skica">
               <PropertyRef Name="idSkica" />
             </Principal>
             <Dependent Role="Prestupnik">
-              <PropertyRef Name="idPrestupnik" />
+              <PropertyRef Name="idSkica" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -679,13 +746,16 @@
           <EntitySet Name="Oci" EntityType="Self.Oci" />
           <EntitySet Name="Prestupnik" EntityType="Self.Prestupnik" />
           <EntitySet Name="Skica" EntityType="Self.Skica" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Usne" EntityType="Self.Usne" />
+          <AssociationSet Name="FK_Brada_Brada" Association="Self.FK_Brada_Brada">
+            <End Role="Brada" EntitySet="Brada" />
+            <End Role="Brada1" EntitySet="Brada" />
+          </AssociationSet>
           <AssociationSet Name="FK_Skica_Brada" Association="Self.FK_Skica_Brada">
             <End Role="Brada" EntitySet="Brada" />
             <End Role="Skica" EntitySet="Skica" />
           </AssociationSet>
-          <AssociationSet Name="FK_Skica_Brkovi" Association="Self.FK_Skica_Brkovi">
+          <AssociationSet Name="FK_Skica_Celjust" Association="Self.FK_Skica_Celjust">
             <End Role="Celjust" EntitySet="Celjust" />
             <End Role="Skica" EntitySet="Skica" />
           </AssociationSet>
@@ -697,9 +767,17 @@
             <End Role="Korisnik" EntitySet="Korisnik" />
             <End Role="Komentar" EntitySet="Komentar" />
           </AssociationSet>
+          <AssociationSet Name="FK_Komentar_Nestali" Association="Self.FK_Komentar_Nestali">
+            <End Role="Nestali" EntitySet="Nestali" />
+            <End Role="Komentar" EntitySet="Komentar" />
+          </AssociationSet>
           <AssociationSet Name="FK_Komentar_Prestupnik" Association="Self.FK_Komentar_Prestupnik">
             <End Role="Prestupnik" EntitySet="Prestupnik" />
             <End Role="Komentar" EntitySet="Komentar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Korisnik_Korisnik" Association="Self.FK_Korisnik_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Korisnik1" EntitySet="Korisnik" />
           </AssociationSet>
           <AssociationSet Name="FK_Nestali_Korisnik" Association="Self.FK_Nestali_Korisnik">
             <End Role="Korisnik" EntitySet="Korisnik" />
@@ -744,7 +822,7 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Brada">
               <MappingFragment StoreEntitySet="Brada">
                 <ScalarProperty Name="idBrada" ColumnName="idBrada" />
-                <ScalarProperty Name="layer" ColumnName="layer" />
+                <ScalarProperty Name="Layer" ColumnName="Layer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -752,7 +830,7 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Celjust">
               <MappingFragment StoreEntitySet="Celjust">
                 <ScalarProperty Name="idCeljust" ColumnName="idCeljust" />
-                <ScalarProperty Name="layer" ColumnName="layer" />
+                <ScalarProperty Name="Layer" ColumnName="Layer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -760,7 +838,7 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Glava">
               <MappingFragment StoreEntitySet="Glava">
                 <ScalarProperty Name="idGlava" ColumnName="idGlava" />
-                <ScalarProperty Name="layer" ColumnName="layer" />
+                <ScalarProperty Name="Layer" ColumnName="Layer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -768,9 +846,10 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Komentar">
               <MappingFragment StoreEntitySet="Komentar">
                 <ScalarProperty Name="idKomentar" ColumnName="idKomentar" />
-                <ScalarProperty Name="text" ColumnName="text" />
-                <ScalarProperty Name="idPrestupnik" ColumnName="idPrestupnik" />
+                <ScalarProperty Name="Tekst" ColumnName="Tekst" />
                 <ScalarProperty Name="idKorisnik" ColumnName="idKorisnik" />
+                <ScalarProperty Name="idNestali" ColumnName="idNestali" />
+                <ScalarProperty Name="idPrestupnik" ColumnName="idPrestupnik" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -778,10 +857,9 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Korisnik">
               <MappingFragment StoreEntitySet="Korisnik">
                 <ScalarProperty Name="idKorisnik" ColumnName="idKorisnik" />
-                <ScalarProperty Name="ime" ColumnName="ime" />
-                <ScalarProperty Name="prezime" ColumnName="prezime" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="brojTelefona" ColumnName="brojTelefona" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -789,7 +867,7 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Kosa">
               <MappingFragment StoreEntitySet="Kosa">
                 <ScalarProperty Name="idKosa" ColumnName="idKosa" />
-                <ScalarProperty Name="layer" ColumnName="layer" />
+                <ScalarProperty Name="Layer" ColumnName="Layer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -797,17 +875,13 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Nestali">
               <MappingFragment StoreEntitySet="Nestali">
                 <ScalarProperty Name="idNestali" ColumnName="idNestali" />
-                <ScalarProperty Name="ime" ColumnName="ime" />
-                <ScalarProperty Name="prezime" ColumnName="prezime" />
-                <ScalarProperty Name="godinaRodenja" ColumnName="godinaRodenja" />
-                <ScalarProperty Name="fotografija" ColumnName="fotografija" />
-                <ScalarProperty Name="datumNestanka" ColumnName="datumNestanka" />
-                <ScalarProperty Name="mjestoNestanka" ColumnName="mjestoNestanka" />
+                <ScalarProperty Name="Ime" ColumnName="Ime" />
+                <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+                <ScalarProperty Name="GodinaRodjenja" ColumnName="GodinaRodjenja" />
+                <ScalarProperty Name="DatumNestanka" ColumnName="DatumNestanka" />
+                <ScalarProperty Name="MjestoNestanka" ColumnName="MjestoNestanka" />
+                <ScalarProperty Name="Fotografija" ColumnName="Fotografija" />
                 <ScalarProperty Name="idKorisnik" ColumnName="idKorisnik" />
-                <ScalarProperty Name="spol" ColumnName="spol" />
-                <ScalarProperty Name="komentar" ColumnName="komentar" />
-                <ScalarProperty Name="visina" ColumnName="visina" />
-                <ScalarProperty Name="tezina" ColumnName="tezina" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -815,7 +889,7 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Nos">
               <MappingFragment StoreEntitySet="Nos">
                 <ScalarProperty Name="idNos" ColumnName="idNos" />
-                <ScalarProperty Name="layer" ColumnName="layer" />
+                <ScalarProperty Name="Layer" ColumnName="Layer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -823,7 +897,7 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Obrve">
               <MappingFragment StoreEntitySet="Obrve">
                 <ScalarProperty Name="idObrve" ColumnName="idObrve" />
-                <ScalarProperty Name="layer" ColumnName="layer" />
+                <ScalarProperty Name="Layer" ColumnName="Layer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -831,7 +905,7 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Oci">
               <MappingFragment StoreEntitySet="Oci">
                 <ScalarProperty Name="idOci" ColumnName="idOci" />
-                <ScalarProperty Name="layer" ColumnName="layer" />
+                <ScalarProperty Name="Layer" ColumnName="Layer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -839,12 +913,11 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Prestupnik">
               <MappingFragment StoreEntitySet="Prestupnik">
                 <ScalarProperty Name="idPrestupnik" ColumnName="idPrestupnik" />
+                <ScalarProperty Name="DatumPrestupa" ColumnName="DatumPrestupa" />
+                <ScalarProperty Name="MjestoPrestupa" ColumnName="MjestoPrestupa" />
                 <ScalarProperty Name="idSkica" ColumnName="idSkica" />
                 <ScalarProperty Name="idKorisnik" ColumnName="idKorisnik" />
-                <ScalarProperty Name="opis" ColumnName="opis" />
-                <ScalarProperty Name="fotografija" ColumnName="fotografija" />
-                <ScalarProperty Name="mjestoPrijestupa" ColumnName="mjestoPrijestupa" />
-                <ScalarProperty Name="datumPrijestupa" ColumnName="datumPrijestupa" />
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -852,22 +925,15 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Skica">
               <MappingFragment StoreEntitySet="Skica">
                 <ScalarProperty Name="idSkica" ColumnName="idSkica" />
-                <ScalarProperty Name="idBrada" ColumnName="idBrada" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
                 <ScalarProperty Name="idGlava" ColumnName="idGlava" />
-                <ScalarProperty Name="foto" ColumnName="foto" />
-                <ScalarProperty Name="idUsne" ColumnName="idUsne" />
+                <ScalarProperty Name="idCeljust" ColumnName="idCeljust" />
                 <ScalarProperty Name="idObrve" ColumnName="idObrve" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="PersonTrackerDBModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="idOci" ColumnName="idOci" />
+                <ScalarProperty Name="idNos" ColumnName="idNos" />
+                <ScalarProperty Name="idUsne" ColumnName="idUsne" />
+                <ScalarProperty Name="idBrada" ColumnName="idBrada" />
+                <ScalarProperty Name="idKosa" ColumnName="idKosa" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -875,7 +941,7 @@
             <EntityTypeMapping TypeName="PersonTrackerDBModel.Usne">
               <MappingFragment StoreEntitySet="Usne">
                 <ScalarProperty Name="idUsne" ColumnName="idUsne" />
-                <ScalarProperty Name="layer" ColumnName="layer" />
+                <ScalarProperty Name="Layer" ColumnName="Layer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

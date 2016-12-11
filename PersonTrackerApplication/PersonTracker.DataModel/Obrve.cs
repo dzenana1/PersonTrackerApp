@@ -21,7 +21,7 @@ namespace PersonTracker.DataModel
         }
     
         public int idObrve { get; set; }
-        public byte[] layer { get; set; }
+        public byte[] Layer { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Skica> Skica { get; set; }

@@ -12,12 +12,12 @@ namespace PersonTracker.Services.Models
         [DataMember]
         public int idKorisnik { get; set; }
         [DataMember]
-        public string ime { get; set; }
+        public string Ime { get; set; }
         [DataMember]
-        public string prezime { get; set; }
+        public string Prezime { get; set; }
         [DataMember]
-        public string email { get; set; }
-        [DataMember]
-        public string brojTelefona { get; set; }
+        public string Email { get; set; }
+
+
     }
 }

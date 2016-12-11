@@ -14,12 +14,22 @@ namespace PersonTracker.DataModel
     
     public partial class Skica
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Skica()
+        {
+            this.Prestupnik = new HashSet<Prestupnik>();
+        }
+    
         public int idSkica { get; set; }
-        public Nullable<int> idBrada { get; set; }
+        public byte[] Foto { get; set; }
         public Nullable<int> idGlava { get; set; }
-        public byte[] foto { get; set; }
-        public Nullable<int> idUsne { get; set; }
+        public Nullable<int> idCeljust { get; set; }
         public Nullable<int> idObrve { get; set; }
+        public Nullable<int> idOci { get; set; }
+        public Nullable<int> idNos { get; set; }
+        public Nullable<int> idUsne { get; set; }
+        public Nullable<int> idBrada { get; set; }
+        public Nullable<int> idKosa { get; set; }
     
         public virtual Brada Brada { get; set; }
         public virtual Celjust Celjust { get; set; }
@@ -28,7 +38,8 @@ namespace PersonTracker.DataModel
         public virtual Nos Nos { get; set; }
         public virtual Obrve Obrve { get; set; }
         public virtual Oci Oci { get; set; }
-        public virtual Prestupnik Prestupnik { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Prestupnik> Prestupnik { get; set; }
         public virtual Usne Usne { get; set; }
     }
 }

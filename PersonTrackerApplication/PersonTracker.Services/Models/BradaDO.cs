@@ -12,6 +12,6 @@ namespace PersonTracker.Services.Models
         [DataMember]
         public int idBrada { get; set; }
         [DataMember]
-        public byte[] layer { get; set; }
+        public byte[] Layer { get; set; }
     }
 }

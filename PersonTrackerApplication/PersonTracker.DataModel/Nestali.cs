@@ -14,19 +14,23 @@ namespace PersonTracker.DataModel
     
     public partial class Nestali
     {
-        public int idNestali { get; set; }
-        public string ime { get; set; }
-        public string prezime { get; set; }
-        public Nullable<int> godinaRodenja { get; set; }
-        public byte[] fotografija { get; set; }
-        public Nullable<System.DateTime> datumNestanka { get; set; }
-        public string mjestoNestanka { get; set; }
-        public Nullable<int> idKorisnik { get; set; }
-        public byte[] spol { get; set; }
-        public string komentar { get; set; }
-        public string visina { get; set; }
-        public string tezina { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Nestali()
+        {
+            this.Komentar = new HashSet<Komentar>();
+        }
     
+        public int idNestali { get; set; }
+        public string Ime { get; set; }
+        public string Prezime { get; set; }
+        public Nullable<int> GodinaRodjenja { get; set; }
+        public Nullable<System.DateTime> DatumNestanka { get; set; }
+        public string MjestoNestanka { get; set; }
+        public byte[] Fotografija { get; set; }
+        public Nullable<int> idKorisnik { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Komentar> Komentar { get; set; }
         public virtual Korisnik Korisnik { get; set; }
     }
 }

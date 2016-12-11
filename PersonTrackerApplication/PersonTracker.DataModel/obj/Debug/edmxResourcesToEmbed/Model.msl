@@ -5,7 +5,7 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Brada">
         <MappingFragment StoreEntitySet="Brada">
           <ScalarProperty Name="idBrada" ColumnName="idBrada" />
-          <ScalarProperty Name="layer" ColumnName="layer" />
+          <ScalarProperty Name="Layer" ColumnName="Layer" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -13,7 +13,7 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Celjust">
         <MappingFragment StoreEntitySet="Celjust">
           <ScalarProperty Name="idCeljust" ColumnName="idCeljust" />
-          <ScalarProperty Name="layer" ColumnName="layer" />
+          <ScalarProperty Name="Layer" ColumnName="Layer" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -21,7 +21,7 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Glava">
         <MappingFragment StoreEntitySet="Glava">
           <ScalarProperty Name="idGlava" ColumnName="idGlava" />
-          <ScalarProperty Name="layer" ColumnName="layer" />
+          <ScalarProperty Name="Layer" ColumnName="Layer" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -29,9 +29,10 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Komentar">
         <MappingFragment StoreEntitySet="Komentar">
           <ScalarProperty Name="idKomentar" ColumnName="idKomentar" />
-          <ScalarProperty Name="text" ColumnName="text" />
-          <ScalarProperty Name="idPrestupnik" ColumnName="idPrestupnik" />
+          <ScalarProperty Name="Tekst" ColumnName="Tekst" />
           <ScalarProperty Name="idKorisnik" ColumnName="idKorisnik" />
+          <ScalarProperty Name="idNestali" ColumnName="idNestali" />
+          <ScalarProperty Name="idPrestupnik" ColumnName="idPrestupnik" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -39,10 +40,9 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Korisnik">
         <MappingFragment StoreEntitySet="Korisnik">
           <ScalarProperty Name="idKorisnik" ColumnName="idKorisnik" />
-          <ScalarProperty Name="ime" ColumnName="ime" />
-          <ScalarProperty Name="prezime" ColumnName="prezime" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="brojTelefona" ColumnName="brojTelefona" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -50,7 +50,7 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Kosa">
         <MappingFragment StoreEntitySet="Kosa">
           <ScalarProperty Name="idKosa" ColumnName="idKosa" />
-          <ScalarProperty Name="layer" ColumnName="layer" />
+          <ScalarProperty Name="Layer" ColumnName="Layer" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -58,17 +58,13 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Nestali">
         <MappingFragment StoreEntitySet="Nestali">
           <ScalarProperty Name="idNestali" ColumnName="idNestali" />
-          <ScalarProperty Name="ime" ColumnName="ime" />
-          <ScalarProperty Name="prezime" ColumnName="prezime" />
-          <ScalarProperty Name="godinaRodenja" ColumnName="godinaRodenja" />
-          <ScalarProperty Name="fotografija" ColumnName="fotografija" />
-          <ScalarProperty Name="datumNestanka" ColumnName="datumNestanka" />
-          <ScalarProperty Name="mjestoNestanka" ColumnName="mjestoNestanka" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="GodinaRodjenja" ColumnName="GodinaRodjenja" />
+          <ScalarProperty Name="DatumNestanka" ColumnName="DatumNestanka" />
+          <ScalarProperty Name="MjestoNestanka" ColumnName="MjestoNestanka" />
+          <ScalarProperty Name="Fotografija" ColumnName="Fotografija" />
           <ScalarProperty Name="idKorisnik" ColumnName="idKorisnik" />
-          <ScalarProperty Name="spol" ColumnName="spol" />
-          <ScalarProperty Name="komentar" ColumnName="komentar" />
-          <ScalarProperty Name="visina" ColumnName="visina" />
-          <ScalarProperty Name="tezina" ColumnName="tezina" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -76,7 +72,7 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Nos">
         <MappingFragment StoreEntitySet="Nos">
           <ScalarProperty Name="idNos" ColumnName="idNos" />
-          <ScalarProperty Name="layer" ColumnName="layer" />
+          <ScalarProperty Name="Layer" ColumnName="Layer" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -84,7 +80,7 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Obrve">
         <MappingFragment StoreEntitySet="Obrve">
           <ScalarProperty Name="idObrve" ColumnName="idObrve" />
-          <ScalarProperty Name="layer" ColumnName="layer" />
+          <ScalarProperty Name="Layer" ColumnName="Layer" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -92,7 +88,7 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Oci">
         <MappingFragment StoreEntitySet="Oci">
           <ScalarProperty Name="idOci" ColumnName="idOci" />
-          <ScalarProperty Name="layer" ColumnName="layer" />
+          <ScalarProperty Name="Layer" ColumnName="Layer" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -100,12 +96,11 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Prestupnik">
         <MappingFragment StoreEntitySet="Prestupnik">
           <ScalarProperty Name="idPrestupnik" ColumnName="idPrestupnik" />
+          <ScalarProperty Name="DatumPrestupa" ColumnName="DatumPrestupa" />
+          <ScalarProperty Name="MjestoPrestupa" ColumnName="MjestoPrestupa" />
           <ScalarProperty Name="idSkica" ColumnName="idSkica" />
           <ScalarProperty Name="idKorisnik" ColumnName="idKorisnik" />
-          <ScalarProperty Name="opis" ColumnName="opis" />
-          <ScalarProperty Name="fotografija" ColumnName="fotografija" />
-          <ScalarProperty Name="mjestoPrijestupa" ColumnName="mjestoPrijestupa" />
-          <ScalarProperty Name="datumPrijestupa" ColumnName="datumPrijestupa" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -113,22 +108,15 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Skica">
         <MappingFragment StoreEntitySet="Skica">
           <ScalarProperty Name="idSkica" ColumnName="idSkica" />
-          <ScalarProperty Name="idBrada" ColumnName="idBrada" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
           <ScalarProperty Name="idGlava" ColumnName="idGlava" />
-          <ScalarProperty Name="foto" ColumnName="foto" />
-          <ScalarProperty Name="idUsne" ColumnName="idUsne" />
+          <ScalarProperty Name="idCeljust" ColumnName="idCeljust" />
           <ScalarProperty Name="idObrve" ColumnName="idObrve" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="PersonTrackerDBModel.sysdiagrams">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="idOci" ColumnName="idOci" />
+          <ScalarProperty Name="idNos" ColumnName="idNos" />
+          <ScalarProperty Name="idUsne" ColumnName="idUsne" />
+          <ScalarProperty Name="idBrada" ColumnName="idBrada" />
+          <ScalarProperty Name="idKosa" ColumnName="idKosa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -136,7 +124,7 @@
       <EntityTypeMapping TypeName="PersonTrackerDBModel.Usne">
         <MappingFragment StoreEntitySet="Usne">
           <ScalarProperty Name="idUsne" ColumnName="idUsne" />
-          <ScalarProperty Name="layer" ColumnName="layer" />
+          <ScalarProperty Name="Layer" ColumnName="Layer" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -14,9 +14,16 @@ namespace PersonTracker.DataModel
     
     public partial class Celjust
     {
-        public int idCeljust { get; set; }
-        public byte[] layer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Celjust()
+        {
+            this.Skica = new HashSet<Skica>();
+        }
     
-        public virtual Skica Skica { get; set; }
+        public int idCeljust { get; set; }
+        public byte[] Layer { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Skica> Skica { get; set; }
     }
 }

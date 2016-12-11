@@ -19,18 +19,21 @@ namespace PersonTracker.DataModel
         {
             this.Komentar = new HashSet<Komentar>();
             this.Nestali = new HashSet<Nestali>();
+            this.Prestupnik = new HashSet<Prestupnik>();
         }
     
         public int idKorisnik { get; set; }
-        public string ime { get; set; }
-        public string prezime { get; set; }
-        public string email { get; set; }
-        public string brojTelefona { get; set; }
+        public string Ime { get; set; }
+        public string Prezime { get; set; }
+        public string Email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Komentar> Komentar { get; set; }
+        public virtual Korisnik Korisnik1 { get; set; }
+        public virtual Korisnik Korisnik2 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Nestali> Nestali { get; set; }
-        public virtual Prestupnik Prestupnik { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Prestupnik> Prestupnik { get; set; }
     }
 }

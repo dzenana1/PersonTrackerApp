@@ -14,9 +14,18 @@ namespace PersonTracker.DataModel
     
     public partial class Brada
     {
-        public int idBrada { get; set; }
-        public byte[] layer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Brada()
+        {
+            this.Skica = new HashSet<Skica>();
+        }
     
-        public virtual Skica Skica { get; set; }
+        public int idBrada { get; set; }
+        public byte[] Layer { get; set; }
+    
+        public virtual Brada Brada1 { get; set; }
+        public virtual Brada Brada2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Skica> Skica { get; set; }
     }
 }

@@ -12,10 +12,12 @@ namespace PersonTracker.Services.Models
         [DataMember]
         public int idKomentar { get; set; }
         [DataMember]
-        public string text { get; set; }
+        public string Text { get; set; }
         [DataMember]
         public Nullable<int> idPrestupnik { get; set; }
         [DataMember]
         public Nullable<int> idKorisnik { get; set; }
+        [DataMember]
+        public Nullable<int> idNestali { get; set; }
     }
 }

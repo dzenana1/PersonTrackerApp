@@ -12,22 +12,23 @@ namespace PersonTracker.Services.Models
         [DataMember]
         public int idSkica { get; set; }
         [DataMember]
-        public virtual BradaDO Brada { get; set; }
+        public byte[] Foto { get; set; }
         [DataMember]
-        public virtual CeljustDO Celjust { get; set; }
+        public Nullable<int> idGlava { get; set; }
         [DataMember]
-        public virtual GlavaDO Glava { get; set; }
+        public Nullable<int> idCeljust { get; set; }
         [DataMember]
-        public virtual KosaDO Kosa { get; set; }
+        public Nullable<int> idObrve { get; set; }
         [DataMember]
-        public virtual NosDO Nos { get; set; }
+        public Nullable<int> idOci { get; set; }
         [DataMember]
-        public virtual ObrveDO Obrve { get; set; }
+        public Nullable<int> idNos { get; set; }
         [DataMember]
-        public virtual OciDO Oci { get; set; }
+        public Nullable<int> idUsne { get; set; }
         [DataMember]
-        public virtual PrestupnikDO Prestupnik { get; set; }
+        public Nullable<int> idBrada { get; set; }
         [DataMember]
-        public virtual UsneDO usne { get; set; }
+        public Nullable<int> idKosa { get; set; }
+       
     }
 }

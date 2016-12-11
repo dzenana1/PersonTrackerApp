@@ -145,3 +145,7 @@ C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTracker
 C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTrackerApplication\bin\System.Net.Http.Formatting.xml
 C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTrackerApplication\bin\System.Web.Http.xml
 C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTrackerApplication\bin\System.Web.Http.Cors.xml
+C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTrackerApplication\bin\EntityFramework.dll
+C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTrackerApplication\bin\EntityFramework.SqlServer.dll
+C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTrackerApplication\bin\EntityFramework.xml
+C:\Users\Dzenana\Desktop\PersonTrackerApp\PersonTrackerApplication\PersonTrackerApplication\bin\EntityFramework.SqlServer.xml

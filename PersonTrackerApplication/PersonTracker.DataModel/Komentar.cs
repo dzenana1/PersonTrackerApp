@@ -15,11 +15,13 @@ namespace PersonTracker.DataModel
     public partial class Komentar
     {
         public int idKomentar { get; set; }
-        public string text { get; set; }
-        public Nullable<int> idPrestupnik { get; set; }
+        public string Tekst { get; set; }
         public Nullable<int> idKorisnik { get; set; }
+        public Nullable<int> idNestali { get; set; }
+        public Nullable<int> idPrestupnik { get; set; }
     
         public virtual Korisnik Korisnik { get; set; }
+        public virtual Nestali Nestali { get; set; }
         public virtual Prestupnik Prestupnik { get; set; }
     }
 }

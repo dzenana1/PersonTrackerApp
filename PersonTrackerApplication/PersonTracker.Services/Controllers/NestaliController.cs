@@ -36,32 +36,28 @@ namespace PersonTracker.Services.Services
         [HttpPost]
         [Route("Register")]        
         public IHttpActionResult Register(NestaliDO nestali)
-        {
-            try {       
-            using (var ctx = new PersonTrackerDBEntities())
+        {          
+            try
             {
+                using (var ctx = new PersonTrackerDBEntities())
+                {
                     Nestali n = new Nestali()
                     {
-                        idNestali = nestali.idNestali,
-                        ime = nestali.ime,
-                        prezime = nestali.prezime,
-                        godinaRodenja = nestali.godinaRodenja,
-                        // fotografija=nestali.fotografija,
-                        //datumNestanka=nestali.datumNestanka,
-                        mjestoNestanka = nestali.mjestoNestanka,
-                        idKorisnik = nestali.idKorisnik,
-                        //spol=nestali.spol,
-                        komentar = nestali.komentar,
-                        visina = nestali.komentar,
-                        tezina = nestali.tezina,
-                        Korisnik =new Korisnik(){
-                            idKorisnik=nestali.Korisnik.idKorisnik,
-                            ime=nestali.Korisnik.ime,
-                            prezime = nestali.Korisnik.prezime,
-                            email = nestali.Korisnik.email,
-                            brojTelefona = nestali.Korisnik.brojTelefona,
-                        }
-                    };
+                        //idNestali = nestali.idNestali,
+                        Ime = nestali.Ime,
+                        Prezime = nestali.Prezime,
+                        GodinaRodjenja = nestali.GodinaRodenja,
+                        Fotografija=nestali.Fotografija,
+                        DatumNestanka=nestali.DatumNestanka,
+                        MjestoNestanka=nestali.MjestoNestanka,
+                       // idKorisnik=nestali.idKorisnik                          
+                        //{
+                        //    idKorisnik=nestali.Korisnik.idKorisnik,
+                        //    Ime=nestali.Korisnik.Ime,
+                        //    Prezime=nestali.Korisnik.Prezime,
+                        //    Email=nestali.Korisnik.Email
+                        //}                    
+                        };
                 ctx.Nestali.Add(n);
                 ctx.SaveChanges();
                 return Ok();
@@ -70,8 +66,10 @@ namespace PersonTracker.Services.Services
             catch (Exception e)
             {
                 return BadRequest(e.Message);
-            }
-        }
+    }
+}
 
     }
+
+
 }

@@ -37,7 +37,6 @@ namespace PersonTracker.DataModel
         public virtual DbSet<Oci> Oci { get; set; }
         public virtual DbSet<Prestupnik> Prestupnik { get; set; }
         public virtual DbSet<Skica> Skica { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usne> Usne { get; set; }
     }
 }
