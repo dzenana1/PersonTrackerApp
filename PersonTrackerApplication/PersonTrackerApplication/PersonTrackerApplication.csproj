@@ -162,6 +162,7 @@
     <Content Include="index.html" />
     <Content Include="logo1.png" />
     <Content Include="logo2.png" />
+    <Content Include="podlogaSkiceBijela.jpg" />
     <Content Include="prijaviDelinkventa.html" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
@@ -191,6 +192,80 @@
     <Content Include="scripts\jquery-3.1.1.min.js" />
     <Content Include="scripts\jquery-3.1.1.slim.js" />
     <Content Include="scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Skica\Brada\1.png" />
+    <Content Include="Skica\Brada\2.png" />
+    <Content Include="Skica\Brada\3.png" />
+    <Content Include="Skica\Brada\4.png" />
+    <Content Include="Skica\Brada\5.png" />
+    <Content Include="Skica\Brada\6.png" />
+    <Content Include="Skica\Brada\7.png" />
+    <Content Include="Skica\Brada\8.png" />
+    <Content Include="Skica\Brada\9.png" />
+    <Content Include="Skica\Celjust\1.png" />
+    <Content Include="Skica\Celjust\2.png" />
+    <Content Include="Skica\Celjust\3.png" />
+    <Content Include="Skica\Celjust\4.png" />
+    <Content Include="Skica\Celjust\5.png" />
+    <Content Include="Skica\Celjust\6.png" />
+    <Content Include="Skica\Celjust\7.png" />
+    <Content Include="Skica\Celjust\8.png" />
+    <Content Include="Skica\Celjust\9.png" />
+    <EmbeddedResource Include="Skica\Glava\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Skica\Glava\2.png" />
+    <Content Include="Skica\Glava\3.png" />
+    <Content Include="Skica\Glava\4.png" />
+    <Content Include="Skica\Glava\5.png" />
+    <Content Include="Skica\Glava\6.png" />
+    <Content Include="Skica\Glava\7.png" />
+    <Content Include="Skica\Glava\8.png" />
+    <Content Include="Skica\Glava\9.png" />
+    <Content Include="Skica\Kosa\1.png" />
+    <Content Include="Skica\Kosa\2.png" />
+    <Content Include="Skica\Kosa\3.png" />
+    <Content Include="Skica\Kosa\4.png" />
+    <Content Include="Skica\Kosa\5.png" />
+    <Content Include="Skica\Kosa\6.png" />
+    <Content Include="Skica\Kosa\7.png" />
+    <Content Include="Skica\Kosa\8.png" />
+    <Content Include="Skica\Kosa\9.png" />
+    <Content Include="Skica\Nos\1.png" />
+    <Content Include="Skica\Nos\2.png" />
+    <Content Include="Skica\Nos\3.png" />
+    <Content Include="Skica\Nos\4.png" />
+    <Content Include="Skica\Nos\5.png" />
+    <Content Include="Skica\Nos\6.png" />
+    <Content Include="Skica\Nos\7.png" />
+    <Content Include="Skica\Nos\8.png" />
+    <Content Include="Skica\Nos\9.png" />
+    <Content Include="Skica\Obrve\1.png" />
+    <Content Include="Skica\Obrve\2.png" />
+    <Content Include="Skica\Obrve\3.png" />
+    <Content Include="Skica\Obrve\4.png" />
+    <Content Include="Skica\Obrve\5.png" />
+    <Content Include="Skica\Obrve\6.png" />
+    <Content Include="Skica\Obrve\7.png" />
+    <Content Include="Skica\Obrve\8.png" />
+    <Content Include="Skica\Obrve\9.png" />
+    <Content Include="Skica\Oci\1.png" />
+    <Content Include="Skica\Oci\2.png" />
+    <Content Include="Skica\Oci\3.png" />
+    <Content Include="Skica\Oci\4.png" />
+    <Content Include="Skica\Oci\5.png" />
+    <Content Include="Skica\Oci\6.png" />
+    <Content Include="Skica\Oci\7.png" />
+    <Content Include="Skica\Oci\8.png" />
+    <Content Include="Skica\Oci\9.png" />
+    <Content Include="Skica\Usta\1.png" />
+    <Content Include="Skica\Usta\2.png" />
+    <Content Include="Skica\Usta\3.png" />
+    <Content Include="Skica\Usta\4.png" />
+    <Content Include="Skica\Usta\5.png" />
+    <Content Include="Skica\Usta\6.png" />
+    <Content Include="Skica\Usta\7.png" />
+    <Content Include="Skica\Usta\8.png" />
+    <Content Include="Skica\Usta\9.png" />
     <Content Include="Skice.css" />
     <Content Include="statistike.html" />
     <Content Include="prijaviNestanak.html" />
@@ -225,7 +300,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Skica\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

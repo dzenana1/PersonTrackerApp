@@ -110,7 +110,21 @@
             filter: brightness(.9) grayscale(.5) opacity(.9);
 }
 
-/* Extras */
 a:visited{color:#888}
 a{color:#444;text-decoration:none;}
 p{margin-bottom:.3em;}
+
+.skica{
+    display:block;
+    float:left;
+    width:50%
+}
+
+canvas{
+    position: fixed;
+    width: 500px;
+    height:500px;
+    top: 15%;
+    right: 5%;
+    border: solid 3px black;
+}
