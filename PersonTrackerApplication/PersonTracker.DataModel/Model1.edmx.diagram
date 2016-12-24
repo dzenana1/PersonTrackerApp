@@ -4,20 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2af53b471b19471da97c01a3cd4646e5" Name="Diagram1">
-        <EntityTypeShape EntityType="PersonTrackerDBModel.Brada" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonTrackerDBModel.Celjust" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonTrackerDBModel.Glava" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonTrackerDBModel.Komentar" Width="1.5" PointX="7.5" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonTrackerDBModel.Korisnik" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonTrackerDBModel.Kosa" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonTrackerDBModel.Nestali" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+      <Diagram DiagramId="92e737b653344b9ebb73561bd7203977" Name="Diagram1">
+        <EntityTypeShape EntityType="PersonTrackerDBModel.Brada" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonTrackerDBModel.Celjust" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonTrackerDBModel.Glava" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonTrackerDBModel.Komentar" Width="1.5" PointX="10.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonTrackerDBModel.Korisnik" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonTrackerDBModel.Kosa" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonTrackerDBModel.Nestali" Width="1.5" PointX="8" PointY="6.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonTrackerDBModel.Nos" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonTrackerDBModel.Obrve" Width="1.5" PointX="0.75" PointY="15.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonTrackerDBModel.Oci" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonTrackerDBModel.Prestupnik" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonTrackerDBModel.Obrve" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonTrackerDBModel.Oci" Width="1.5" PointX="0.75" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonTrackerDBModel.Prestupnik" Width="1.5" PointX="8" PointY="10" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonTrackerDBModel.Skica" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="PersonTrackerDBModel.Usne" Width="1.5" PointX="0.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonTrackerDBModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PersonTrackerDBModel.Usne" Width="1.5" PointX="0.75" PointY="20.5" IsExpanded="true" />
         <AssociationConnector Association="PersonTrackerDBModel.FK_Brada_Brada" ManuallyRouted="false" />
         <AssociationConnector Association="PersonTrackerDBModel.FK_Skica_Brada" ManuallyRouted="false" />
         <AssociationConnector Association="PersonTrackerDBModel.FK_Skica_Celjust" ManuallyRouted="false" />
@@ -32,7 +33,6 @@
         <AssociationConnector Association="PersonTrackerDBModel.FK_Skica_Nos" ManuallyRouted="false" />
         <AssociationConnector Association="PersonTrackerDBModel.FK_Skica_Obrve" ManuallyRouted="false" />
         <AssociationConnector Association="PersonTrackerDBModel.FK_Skica_Oci" ManuallyRouted="false" />
-        <AssociationConnector Association="PersonTrackerDBModel.FK_Prestupnik_Skica" ManuallyRouted="false" />
         <AssociationConnector Association="PersonTrackerDBModel.FK_Skica_Usne" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

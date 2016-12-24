@@ -107,19 +107,17 @@
     <Property Name="idPrestupnik" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="DatumPrestupa" Type="DateTime" Precision="0" />
     <Property Name="MjestoPrestupa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="idSkica" Type="Int32" />
     <Property Name="idKorisnik" Type="Int32" />
     <Property Name="Opis" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Komentar" Relationship="Self.FK_Komentar_Prestupnik" FromRole="Prestupnik" ToRole="Komentar" />
     <NavigationProperty Name="Korisnik" Relationship="Self.FK_Prestupnik_Korisnik" FromRole="Prestupnik" ToRole="Korisnik" />
-    <NavigationProperty Name="Skica" Relationship="Self.FK_Prestupnik_Skica" FromRole="Prestupnik" ToRole="Skica" />
   </EntityType>
   <EntityType Name="Skica">
     <Key>
       <PropertyRef Name="idSkica" />
     </Key>
     <Property Name="idSkica" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="idGlava" Type="Int32" />
     <Property Name="idCeljust" Type="Int32" />
     <Property Name="idObrve" Type="Int32" />
@@ -128,6 +126,7 @@
     <Property Name="idUsne" Type="Int32" />
     <Property Name="idBrada" Type="Int32" />
     <Property Name="idKosa" Type="Int32" />
+    <Property Name="Foto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Brada" Relationship="Self.FK_Skica_Brada" FromRole="Skica" ToRole="Brada" />
     <NavigationProperty Name="Celjust" Relationship="Self.FK_Skica_Celjust" FromRole="Skica" ToRole="Celjust" />
     <NavigationProperty Name="Glava" Relationship="Self.FK_Skica_Glava" FromRole="Skica" ToRole="Glava" />
@@ -135,8 +134,17 @@
     <NavigationProperty Name="Nos" Relationship="Self.FK_Skica_Nos" FromRole="Skica" ToRole="Nos" />
     <NavigationProperty Name="Obrve" Relationship="Self.FK_Skica_Obrve" FromRole="Skica" ToRole="Obrve" />
     <NavigationProperty Name="Oci" Relationship="Self.FK_Skica_Oci" FromRole="Skica" ToRole="Oci" />
-    <NavigationProperty Name="Prestupnik" Relationship="Self.FK_Prestupnik_Skica" FromRole="Skica" ToRole="Prestupnik" />
     <NavigationProperty Name="Usne" Relationship="Self.FK_Skica_Usne" FromRole="Skica" ToRole="Usne" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Usne">
     <Key>
@@ -314,18 +322,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Prestupnik_Skica">
-    <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
-    <End Role="Prestupnik" Type="Self.Prestupnik" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Skica">
-        <PropertyRef Name="idSkica" />
-      </Principal>
-      <Dependent Role="Prestupnik">
-        <PropertyRef Name="idSkica" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Skica_Usne">
     <End Role="Usne" Type="Self.Usne" Multiplicity="0..1" />
     <End Role="Skica" Type="Self.Skica" Multiplicity="*" />
@@ -338,7 +334,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="PersonTrackerDBEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="PersonTrackerDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Brada" EntityType="Self.Brada" />
     <EntitySet Name="Celjust" EntityType="Self.Celjust" />
     <EntitySet Name="Glava" EntityType="Self.Glava" />
@@ -351,6 +347,7 @@
     <EntitySet Name="Oci" EntityType="Self.Oci" />
     <EntitySet Name="Prestupnik" EntityType="Self.Prestupnik" />
     <EntitySet Name="Skica" EntityType="Self.Skica" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Usne" EntityType="Self.Usne" />
     <AssociationSet Name="FK_Brada_Brada" Association="Self.FK_Brada_Brada">
       <End Role="Brada" EntitySet="Brada" />
@@ -407,10 +404,6 @@
     <AssociationSet Name="FK_Skica_Oci" Association="Self.FK_Skica_Oci">
       <End Role="Oci" EntitySet="Oci" />
       <End Role="Skica" EntitySet="Skica" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Prestupnik_Skica" Association="Self.FK_Prestupnik_Skica">
-      <End Role="Skica" EntitySet="Skica" />
-      <End Role="Prestupnik" EntitySet="Prestupnik" />
     </AssociationSet>
     <AssociationSet Name="FK_Skica_Usne" Association="Self.FK_Skica_Usne">
       <End Role="Usne" EntitySet="Usne" />

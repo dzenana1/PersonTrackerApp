@@ -12,18 +12,16 @@ namespace PersonTracker.Services.Models
         [DataMember]
         public int idPrestupnik { get; set; }
         [DataMember]
-        public Nullable<int> idSkica { get; set; }
-        [DataMember]
         public Nullable<int> idKorisnik { get; set; }
         [DataMember]
         public string Opis { get; set; }
         [DataMember]
-        public string MjestoPrijestupa { get; set; }
+        public string MjestoPrestupa { get; set; }
         [DataMember]
-        public Nullable<System.DateTime> DatumPrijestupa { get; set; }
+        public string Foto { get; set; }
+        [DataMember]
+        public Nullable<System.DateTime> DatumPrestupa { get; set; }
         [DataMember]
         public virtual KorisnikDO Korisnik { get; set; }
-        [DataMember]
-        public virtual SkicaDO Skica { get; set; }
     }
 }

@@ -88,16 +88,15 @@
     <Property Name="idPrestupnik" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DatumPrestupa" Type="date" />
     <Property Name="MjestoPrestupa" Type="varchar" MaxLength="50" />
-    <Property Name="idSkica" Type="int" />
     <Property Name="idKorisnik" Type="int" />
     <Property Name="Opis" Type="varchar" MaxLength="100" />
+    <Property Name="Foto" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="Skica">
     <Key>
       <PropertyRef Name="idSkica" />
     </Key>
     <Property Name="idSkica" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Foto" Type="varbinary(max)" />
     <Property Name="idGlava" Type="int" />
     <Property Name="idCeljust" Type="int" />
     <Property Name="idObrve" Type="int" />
@@ -106,6 +105,17 @@
     <Property Name="idUsne" Type="int" />
     <Property Name="idBrada" Type="int" />
     <Property Name="idKosa" Type="int" />
+    <Property Name="Foto" Type="text" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Usne">
     <Key>
@@ -195,18 +205,6 @@
       </Principal>
       <Dependent Role="Prestupnik">
         <PropertyRef Name="idKorisnik" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Prestupnik_Skica">
-    <End Role="Skica" Type="Self.Skica" Multiplicity="0..1" />
-    <End Role="Prestupnik" Type="Self.Prestupnik" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Skica">
-        <PropertyRef Name="idSkica" />
-      </Principal>
-      <Dependent Role="Prestupnik">
-        <PropertyRef Name="idSkica" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -319,6 +317,7 @@
     <EntitySet Name="Oci" EntityType="Self.Oci" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Prestupnik" EntityType="Self.Prestupnik" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Skica" EntityType="Self.Skica" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usne" EntityType="Self.Usne" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Brada_Brada" Association="Self.FK_Brada_Brada">
       <End Role="Brada" EntitySet="Brada" />
@@ -346,10 +345,6 @@
     </AssociationSet>
     <AssociationSet Name="FK_Prestupnik_Korisnik" Association="Self.FK_Prestupnik_Korisnik">
       <End Role="Korisnik" EntitySet="Korisnik" />
-      <End Role="Prestupnik" EntitySet="Prestupnik" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Prestupnik_Skica" Association="Self.FK_Prestupnik_Skica">
-      <End Role="Skica" EntitySet="Skica" />
       <End Role="Prestupnik" EntitySet="Prestupnik" />
     </AssociationSet>
     <AssociationSet Name="FK_Skica_Brada" Association="Self.FK_Skica_Brada">

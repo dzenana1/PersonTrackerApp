@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonTrackerApplication", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonTracker.Services", "PersonTracker.Services\PersonTracker.Services.csproj", "{E0C825A0-E15A-4724-A0C9-1C96956F76A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonTracker.DataModel", "PersonTracker.DataModel\PersonTracker.DataModel.csproj", "{EA0C995D-5E09-4C25-9CAD-B3AD9C973BED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonTracker.DataModel", "PersonTracker.DataModel\PersonTracker.DataModel.csproj", "{8282A2B7-B39B-4DFA-BF18-77FE486E5599}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{E0C825A0-E15A-4724-A0C9-1C96956F76A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0C825A0-E15A-4724-A0C9-1C96956F76A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0C825A0-E15A-4724-A0C9-1C96956F76A3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA0C995D-5E09-4C25-9CAD-B3AD9C973BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA0C995D-5E09-4C25-9CAD-B3AD9C973BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA0C995D-5E09-4C25-9CAD-B3AD9C973BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA0C995D-5E09-4C25-9CAD-B3AD9C973BED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8282A2B7-B39B-4DFA-BF18-77FE486E5599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8282A2B7-B39B-4DFA-BF18-77FE486E5599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8282A2B7-B39B-4DFA-BF18-77FE486E5599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8282A2B7-B39B-4DFA-BF18-77FE486E5599}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

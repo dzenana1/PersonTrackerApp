@@ -136,7 +136,29 @@
          if (nos != null) crtajSkicuNos(nos);
          if (usta != null) crtajSkicuUsta(usta);
          if (brada != null) crtajSkicuBrada(brada);
-    }
-   
+     }
+
+     $scope.dodajPrestupnika = function () {
+         var src = d_canvas.toDataURL("image/jpeg", 0.5);
+         console.log(src);
+
+         var Prestupnik = {
+             DatumPrestupa: $scope.datum,
+             MjestoPrestupa: $scope.mjesto,
+             Opis: $scope.opis,
+             Foto: src,
+             Korisnik: {
+                 Ime: $scope.Ime,
+                 Prezime: $scope.Prezime,
+                 Email: $scope.Email
+             }
+         }
+         $log.info(Prestupnik);
+         $http.post(serviceBase + 'api/Prestupnik/Register', Prestupnik)
+         .success(function (data) {
+             $scope.greeting = data;
+         })
+         alert("Gotovo");
+     }
 
 }]);
