@@ -18,14 +18,14 @@ namespace PersonTracker.Services.Models
         [DataMember]
         public Nullable<int> GodinaRodenja { get; set; }
         [DataMember]
-        public byte[] Fotografija { get; set; }
+        public string Fotografija { get; set; }
         [DataMember]
         public Nullable<System.DateTime> DatumNestanka { get; set; }
         [DataMember]
         public string MjestoNestanka { get; set; }
         [DataMember]
         public Nullable<int> idKorisnik { get; set; }
-        //[DataMember]
-        //public virtual KorisnikDO Korisnik { get; set; }
+        [DataMember]
+        public virtual KorisnikDO Korisnik { get; set; }
     }
 }

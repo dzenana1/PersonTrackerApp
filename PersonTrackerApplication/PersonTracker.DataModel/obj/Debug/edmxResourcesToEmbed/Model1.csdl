@@ -71,7 +71,7 @@
     <Property Name="GodinaRodjenja" Type="Int32" />
     <Property Name="DatumNestanka" Type="DateTime" Precision="0" />
     <Property Name="MjestoNestanka" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="Fotografija" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Fotografija" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="idKorisnik" Type="Int32" />
     <NavigationProperty Name="Komentar" Relationship="Self.FK_Komentar_Nestali" FromRole="Nestali" ToRole="Komentar" />
     <NavigationProperty Name="Korisnik" Relationship="Self.FK_Nestali_Korisnik" FromRole="Nestali" ToRole="Korisnik" />

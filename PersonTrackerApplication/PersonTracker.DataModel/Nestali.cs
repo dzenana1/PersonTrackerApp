@@ -26,7 +26,7 @@ namespace PersonTracker.DataModel
         public Nullable<int> GodinaRodjenja { get; set; }
         public Nullable<System.DateTime> DatumNestanka { get; set; }
         public string MjestoNestanka { get; set; }
-        public byte[] Fotografija { get; set; }
+        public string Fotografija { get; set; }
         public Nullable<int> idKorisnik { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

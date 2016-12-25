@@ -29,7 +29,7 @@ namespace PersonTracker.Services.Controllers
                             Ime = item.Ime,
                             Prezime = item.Prezime,
                             DatumNestanka = item.DatumNestanka,
-                            Fotografija = item.Fotografija,
+                            //Fotografija = item.Fotografija,
                             MjestoNestanka = item.MjestoNestanka,                    
                             GodinaRodenja = item.GodinaRodjenja,
                         };

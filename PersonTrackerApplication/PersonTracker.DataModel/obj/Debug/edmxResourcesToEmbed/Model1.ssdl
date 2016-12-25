@@ -57,7 +57,7 @@
     <Property Name="GodinaRodjenja" Type="int" />
     <Property Name="DatumNestanka" Type="date" />
     <Property Name="MjestoNestanka" Type="varchar" MaxLength="45" />
-    <Property Name="Fotografija" Type="varbinary(max)" />
+    <Property Name="Fotografija" Type="varchar(max)" />
     <Property Name="idKorisnik" Type="int" />
   </EntityType>
   <EntityType Name="Nos">

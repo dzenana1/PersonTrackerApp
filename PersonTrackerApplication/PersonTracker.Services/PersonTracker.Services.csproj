@@ -344,7 +344,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PersonTracker.DataModel\PersonTracker.DataModel.csproj">
-      <Project>{8282a2b7-b39b-4dfa-bf18-77fe486e5599}</Project>
+      <Project>{dc5a2167-f44e-48b6-956e-dc36a8b758ef}</Project>
       <Name>PersonTracker.DataModel</Name>
     </ProjectReference>
   </ItemGroup>

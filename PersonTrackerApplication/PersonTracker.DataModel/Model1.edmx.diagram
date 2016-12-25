@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="92e737b653344b9ebb73561bd7203977" Name="Diagram1">
+      <Diagram DiagramId="45820659f03e438bb245e9a29ad1cc6b" Name="Diagram1">
         <EntityTypeShape EntityType="PersonTrackerDBModel.Brada" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonTrackerDBModel.Celjust" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="PersonTrackerDBModel.Glava" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
