@@ -26,9 +26,9 @@ namespace PersonTracker.Services.Services
     public class NestaliController : ApiController
     {
         [HttpPost]
-        [Route("Register")]        
+        [Route("Register")]
         public IHttpActionResult Register(NestaliDO nestali)
-        {          
+        {
             try
             {
                 using (var ctx = new PersonTrackerDBEntities())
@@ -44,23 +44,20 @@ namespace PersonTracker.Services.Services
                         Ime = nestali.Ime,
                         Prezime = nestali.Prezime,
                         GodinaRodjenja = nestali.GodinaRodenja,
-                        Fotografija=nestali.Fotografija,
-                        DatumNestanka=nestali.DatumNestanka,
-                        MjestoNestanka=nestali.MjestoNestanka,
+                        Fotografija = nestali.Fotografija,
+                        DatumNestanka = nestali.DatumNestanka,
+                        MjestoNestanka = nestali.MjestoNestanka,
                         idKorisnik = id.First().idKorisnik
                     };
-                ctx.Nestali.Add(n);
-                ctx.SaveChanges();
-                return Ok();
-            }
+                    ctx.Nestali.Add(n);
+                    ctx.SaveChanges();
+                    return Ok();
+                }
             }
             catch (Exception e)
             {
                 return BadRequest(e.Message);
+            }
+        }
     }
-}
-
-    }
-
-
 }

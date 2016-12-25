@@ -138,27 +138,50 @@
          if (brada != null) crtajSkicuBrada(brada);
      }
 
-     $scope.dodajPrestupnika = function () {
+     $scope.validacija = function (glava, celjust, oci, obrve, nos, usta, mjesto, datum, Ime, Prezime, Email) {
+         alert("Pocetak validacije!");
+         var poruka ="";
+         if (glava == null || celjust == null || oci == null || nos == null || usta == null || obrve == null)
+             poruka = poruka + "<br>\n* Završite crtanje skice prestupnika.\n  Svaka skica minimalno treba da sadrži glavu, čeljust, oči, obrve, nos i usta.";
+         if (mjesto == null)
+             poruka = poruka + "<br>\n* Unesite mjesto prestupništva.";
+         if (datum == null)
+             poruka = poruka + "<br>\n* Unesite datum prestupništva.";
+         if (Ime == null || Prezime==null || Email == null)
+             poruka = poruka + "<br>\n* Vaši podaci nisu dostupni ostalim korisnicima, ali su obavezan dio prijave."
+         alert(poruka);
+         if (poruka != "")
+             return [false, poruka];
+         return [true, poruka];
+     }
+
+     $scope.dodajPrestupnika = function (glava, celjust, oci, obrve, nos, usta, mjesto, datum, Ime, Prezime, Email) {
          var src = d_canvas.toDataURL("image/jpeg", 0.5);
          console.log(src);
+         var validno = $scope.validacija(glava, celjust, oci, obrve, nos, usta, mjesto, datum, Ime, Prezime, Email);
+         if (validno[0]) {
 
-         var Prestupnik = {
-             DatumPrestupa: $scope.datum,
-             MjestoPrestupa: $scope.mjesto,
-             Opis: $scope.opis,
-             Foto: src,
-             Korisnik: {
-                 Ime: $scope.Ime,
-                 Prezime: $scope.Prezime,
-                 Email: $scope.Email
+             var Prestupnik = {
+                 DatumPrestupa: $scope.datum,
+                 MjestoPrestupa: $scope.mjesto,
+                 Opis: $scope.opis,
+                 Foto: src,
+                 Korisnik: {
+                     Ime: $scope.Ime,
+                     Prezime: $scope.Prezime,
+                     Email: $scope.Email
+                 }
              }
+             $log.info(Prestupnik);
+             $http.post(serviceBase + 'api/Prestupnik/Register', Prestupnik)
+             .success(function (data) {
+                 $scope.greeting = data;
+             })
+             document.getElementById('greske').innerHTML = "Uspješno ste prijavili prestupnika.";
          }
-         $log.info(Prestupnik);
-         $http.post(serviceBase + 'api/Prestupnik/Register', Prestupnik)
-         .success(function (data) {
-             $scope.greeting = data;
-         })
-         alert("Gotovo");
+         else {
+             document.getElementById('greske').innerHTML = validno[1];
+         }
      }
 
 }]);

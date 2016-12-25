@@ -23,33 +23,7 @@
             <div class="form-group">
                 <label class="control-label col-md-2">Godina rođenja: </label>
                 <div class="col-xs-4">
-                    <input ng-model="godRodenjaNestali" type="number" id="godinaRodjenja" name="godinaRodjenja" class="form-control" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-md-2">Spol: </label>
-                <div class="col-xs-4">
-                    <input ng-model="muskiNestali" type="radio" name="spol" value="muski" class="form-check-input" checked /> Muški
-                    <br />
-                    <input ng-model="zenskiNestali" type="radio" name="spol" value="zenski" class="form-check-input" /> Ženski
-                </div>
-            </div>
-            <div class="form-group ">
-                <label class="control-label col-md-2">Visina: </label>
-                <div class="col-xs-4 form-inline">
-                    <input ng-model="visinaNestali" type="number" name="visina" class="form-control" /> cm
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-md-2">Težina: </label>
-                <div class="col-xs-4 form-inline">
-                    <input ng-model="tezinaNestali" type="number" name="tezina" class="form-control" /> kg
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="komentar" class="control-label col-md-2">Komentar: </label>
-                <div class="col-xs-4">
-                    <textarea ng-model="komentarNestali" class="form-control" id="komentar" rows="3"></textarea>
+                    <input ng-model="godRodenjaNestali" type="number" min="1910" max="2017" id="godinaRodjenja" name="godinaRodjenja" class="form-control" />
                 </div>
             </div>
             <div class="form-group">
@@ -111,8 +85,10 @@
         <div class="form-group">
             <label class="control-label col-md-2"></label>
             <div class="offset-sm-2 col-sm-10">
-                <button type="submit" class="btn btn-primary" ng-click="dodajNestalog()">Prijavi</button>
+                <button type="submit" class="btn btn-primary" ng-click="dodajNestalog(imeNestali, prezimeNestali, godRodenjaNestali, mjestoVidenjaNestali, datumVidjenjaNestali, slikaNestali, imeKorisnika, prezimeKorisnika, emailKorisnika)">Prijavi</button>
             </div>
         </div>
+        <br /><br />
+        <div id="greske"></div>
     </div>
 </div>
