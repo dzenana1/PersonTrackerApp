@@ -47,8 +47,7 @@
                 <input placeholder="Ime" ng-model="p.imeKorisnika" />
                 <input placeholder="Prezime" ng-model="p.prezimeKorisnika">
                 <input type="email" placeholder="Email" ng-model="p.emailKorisnika" />
-                <button ng-click='btn_add(p.txtcomment,p.imeKorisnika,p.prezimeKorisnika,p.emailKorisnika,p.idNestali)'>Objavi</button>
-
+                <button ng-click='btn_add($index,p.txtcomment,p.imeKorisnika,p.prezimeKorisnika,p.emailKorisnika,p.idNestali)'>Objavi</button>
                 <h4>Svi komentari</h4>
                 <ul>
                     <li ng-repeat="c in p.listaKomentara track by $index"> {{ c }} </li>
