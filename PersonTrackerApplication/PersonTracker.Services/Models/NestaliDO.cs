@@ -24,8 +24,10 @@ namespace PersonTracker.Services.Models
         [DataMember]
         public string MjestoNestanka { get; set; }
         [DataMember]
-        public Nullable<int> idKorisnik { get; set; }
+        public List<String> listaKomentara { get; set; }
         [DataMember]
-        public virtual KorisnikDO Korisnik { get; set; }
+        public Nullable<int> idKorisnik { get; set; }
+        //[DataMember]
+        //public virtual KorisnikDO Korisnik { get; set; }
     }
 }

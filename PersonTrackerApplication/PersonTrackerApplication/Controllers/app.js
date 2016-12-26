@@ -7,6 +7,7 @@ mainModule.config(function ($routeProvider) {
 
         .when('/', {
             templateUrl: '/home.html',
+            controller: 'homePretragaController'
         })
 
         .when('/prijaviNestanak', {
@@ -18,19 +19,9 @@ mainModule.config(function ($routeProvider) {
             templateUrl: '/prijaviDelinkventa.html',
             controller: 'prijaviDelinkventaController'
         })
-
-        .when('/pretraga', {
-            templateUrl: '/pretraga.html',
-            controller: 'pretragaController'
-        })
-
         .when('/statistike', {
             templateUrl: '/statistike.html',
             controller: 'statistikeController'
         });
 
 });
-
-
-
-

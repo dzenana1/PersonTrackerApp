@@ -1,13 +1,62 @@
-﻿<form id="homeForm" ng-app="mainModule">
+﻿<link href="Content/bootstrap.css" rel="stylesheet" />
+<link href="Content/bootstrap-theme.css" rel="stylesheet" />
+<link href="Content/search.css" rel="stylesheet" />
+<div ng-app="mainModule">
     <img style="max-width:20%; max-height:20%; align-content:center" src="logo2.png" />
-    
+
     <h1>O nama</h1>
-    
-    <p><i>Person Tracker </i>stanica je osmišljena kao pomoć pri traženju nestalih osoba ili delinkvenata na području Bosne i Hercegovine. Cilj nam je smanjiti broj nemilih događaja u našoj okolini.
-       <br />
+
+    <p>
+        <i>Person Tracker </i>stanica je osmišljena kao pomoć pri traženju nestalih osoba ili delinkvenata na području Bosne i Hercegovine. Cilj nam je smanjiti broj nemilih događaja u našoj okolini.
+        <br />
         Ukoliko želite objaviti nestanak osobe, to možete učiniti odabirom opcije <i>Prijavi nestanak</i>, te unosom ispravnih podataka o nestalom i svojih podataka.
         <br />
         Ukoliko želite objaviti potragu za sumnjivom osobom ili delinkentom, izaberite opciju <i>Prijavi delinkventa</i>, nakon čega možete modelirati izgled njegovog  lica, te unijeti druge podatke kojima raspolažete i započeti potragu.
         <br />
-        Također, možete aktivno učestvovati u potragama komentarišući objave i dijeljenjem informacija kojima raspolažete. Vaši lični podaci nisu vidljivi drugim korisnicima.</p>
-</form>
+        Također, možete aktivno učestvovati u potragama komentarišući objave i dijeljenjem informacija kojima raspolažete. Vaši lični podaci nisu vidljivi drugim korisnicima.
+    </p>
+
+    <div class="row">
+        <div class="col-xs-4">
+            <div id="imaginary_container">
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control" ng-model="parametarPretrage" placeholder="Pretraga">
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search" ng-click="izlistajPretraga()"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br />
+    <div ng-repeat="p in listaNestalih ">
+        <div class="box">
+            <img class="slikaStil" src="Screenshot_1.png" />
+            <p class="tekstStil">{{p.idNestali}}{{p.Ime}}{{p.Prezime}}{{p.GodinaRodenja}}{{p.MjestoNestanka}}{{p.DatumNestanka}}</p>       
+            <!--<h1 ng-model="p.Ime">{{p.Ime}} </h1>
+            <h1 ng-model="p.Prezime">{{p.Prezime}}</h1>
+            <img ng-model="SlikaPosta"/>
+            <p ng-model="p.GodinaRodenja">{{p.GodinaRodenja}}</p>
+            <p ng-model="p.MjestoNestanka">{{p.MjestoNestanka}}</p>
+            <p ng-model="p.DatumNestanka">{{p.DatumNestanka}}</p>-->
+            <template-comment>Komentari</template-comment>
+            <form>
+                <textarea ng-model="p.txtcomment" placeholder="Vaš komentar"></textarea>
+                <input placeholder="Ime" ng-model="p.imeKorisnika" />
+                <input placeholder="Prezime" ng-model="p.prezimeKorisnika">
+                <input type="email" placeholder="Email" ng-model="p.emailKorisnika" />
+                <button ng-click='btn_add(p.txtcomment,p.imeKorisnika,p.prezimeKorisnika,p.emailKorisnika,p.idNestali)'>Objavi</button>
+
+                <h4>Svi komentari</h4>
+                <ul>
+                    <li ng-repeat="c in p.listaKomentara track by $index"> {{ c }} </li>
+                </ul>
+            </form>
+
+        </div>
+        <br />
+    </div>
+
+</div>

@@ -6,7 +6,6 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Web.Http;
-
 using System.Web.Http.ModelBinding;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -14,14 +13,12 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using PersonTracker.Services.Models;
-
 using PersonTracker.DataModel;
 using System.Web.Http.Cors;
-using System.Data.SqlClient;
 
 namespace PersonTracker.Services.Services
 {
-    [EnableCors("*", "*", "PUT, POST")]
+    [EnableCors("*", "*", "*", "PUT, POST, GET")]
     [RoutePrefix("api/Nestali")]
     public class NestaliController : ApiController
     {
@@ -33,12 +30,6 @@ namespace PersonTracker.Services.Services
             {
                 using (var ctx = new PersonTrackerDBEntities())
                 {
-                    KorisnikController kc = new KorisnikController();
-                    kc.Register(nestali.Korisnik);
-
-                    var id = ctx.Korisnik.SqlQuery("SELECT * FROM dbo.Korisnik WHERE Email = @email", new SqlParameter("@email", nestali.Korisnik.Email));
-
-
                     Nestali n = new Nestali()
                     {
                         Ime = nestali.Ime,
@@ -47,7 +38,13 @@ namespace PersonTracker.Services.Services
                         Fotografija = nestali.Fotografija,
                         DatumNestanka = nestali.DatumNestanka,
                         MjestoNestanka = nestali.MjestoNestanka,
-                        idKorisnik = id.First().idKorisnik
+                        // idKorisnik=nestali.idKorisnik                          
+                        //{
+                        //    idKorisnik=nestali.Korisnik.idKorisnik,
+                        //    Ime=nestali.Korisnik.Ime,
+                        //    Prezime=nestali.Korisnik.Prezime,
+                        //    Email=nestali.Korisnik.Email
+                        //}                    
                     };
                     ctx.Nestali.Add(n);
                     ctx.SaveChanges();
@@ -59,5 +56,37 @@ namespace PersonTracker.Services.Services
                 return BadRequest(e.Message);
             }
         }
+
+        [HttpGet]
+        [Route("DobaviKomentare")]
+        public List<String> DobaviKomentare(int idNest)
+        {
+            List<String> listaKomentara = new List<string>();
+            try
+            {
+                using (var ctx = new PersonTrackerDBEntities())
+                {
+                    for (int i = 0; i < ctx.Komentar.Count(); i++)
+                    {
+                        if (ctx.Komentar.ToArray()[i].idNestali == idNest)
+                        {
+                            listaKomentara.Add(ctx.Komentar.ToArray()[i].Tekst);
+                        }
+                    }
+
+                }
+                return listaKomentara;
+            }
+            catch (Exception e)
+            {
+
+            }
+            return listaKomentara;
+        }
+
     }
+
+
+
+
 }

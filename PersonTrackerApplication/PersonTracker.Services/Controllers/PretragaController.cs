@@ -1,5 +1,7 @@
-﻿using PersonTracker.DataModel;
+﻿
+using PersonTracker.DataModel;
 using PersonTracker.Services.Models;
+using PersonTracker.Services.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,27 +24,31 @@ namespace PersonTracker.Services.Controllers
             {
                 using (var ctx = new PersonTrackerDBEntities())
                 {
-                    foreach (var item in ctx.Nestali.Where(model =>model.Ime.ToLower().Contains(parametarPretrage) || 
-                    model.Prezime.ToLower().Contains(parametarPretrage))){
+                    NestaliController nestContr = new NestaliController();
+                    foreach (var item in ctx.Nestali.Where(model => model.Ime.ToLower().Contains(parametarPretrage) ||
+                    model.Prezime.ToLower().Contains(parametarPretrage)))
+                    {
                         NestaliDO nestali = new NestaliDO
                         {
+                            idNestali = item.idNestali,
                             Ime = item.Ime,
                             Prezime = item.Prezime,
                             DatumNestanka = item.DatumNestanka,
                             Fotografija = item.Fotografija,
-                            MjestoNestanka = item.MjestoNestanka,                    
+                            MjestoNestanka = item.MjestoNestanka,
                             GodinaRodenja = item.GodinaRodjenja,
+                            listaKomentara = nestContr.DobaviKomentare(item.idNestali),
+
                         };
                         listaNestalih.Add(nestali);
                     }
                 }
-                    return Ok(listaNestalih);
+                return Ok(listaNestalih);
             }
             catch (Exception e)
             {
                 return BadRequest(e.Message);
-            }            
+            }
         }
-
     }
 }
